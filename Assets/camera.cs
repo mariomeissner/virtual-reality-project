@@ -18,7 +18,7 @@ public class camera : MonoBehaviour
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-	if(collisionInfo.collider.name=="Terrain"){
+	if(collisionInfo.collider.tag=="Terrain"){
 	    Application.LoadLevel(Application.loadedLevel);    
         } else if(collisionInfo.collider.tag=="PickUp"){
 	    this.transform.parent.GetComponent<VueloController>().speed *= 2; 
