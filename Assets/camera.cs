@@ -20,6 +20,8 @@ public class camera : MonoBehaviour
     {
 	if(collisionInfo.collider.name=="Terrain"){
 	    Application.LoadLevel(Application.loadedLevel);    
-        }    
+        } else if(collisionInfo.collider.tag=="PickUp"){
+	    this.transform.parent.GetComponent<VueloController>().speed *= 2; 
+        }
     }
 }
