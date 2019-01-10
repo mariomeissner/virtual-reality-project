@@ -21,5 +21,5 @@ public class VueloController : MonoBehaviour {
         transform.position = newPosition;
 
     }
-
+   
 }
