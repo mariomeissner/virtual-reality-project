@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-
+    public GameObject IU;
+    public GameObject pajaro;
 	public void reiniciar(){
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
@@ -12,5 +13,9 @@ public class GameManager : MonoBehaviour {
 	public void salir(){
 		Application.Quit ();
 	}
-  
+    public void empezar()
+    {
+        IU.SetActive(false);
+    }
+
 }
