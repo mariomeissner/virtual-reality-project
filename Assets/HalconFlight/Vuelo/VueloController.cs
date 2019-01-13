@@ -5,7 +5,7 @@ using UnityEngine;
 public class VueloController : MonoBehaviour {
     public GameObject IU;
     public GameObject destino;
-    public float speed = 0f;
+    public float speed;
     private Vector3 newPosition;
 
     // Use this for initialization
@@ -17,8 +17,14 @@ public class VueloController : MonoBehaviour {
 
     private void Update()
     {
-        newPosition = Vector3.MoveTowards(transform.position, destino.transform.position, Time.deltaTime * speed);
+
+        Vector3 target = destino.transform.position + 
+            (destino.transform.position - transform.position) * speed;
+
+        newPosition = Vector3.MoveTowards(transform.position, 
+            target, Time.deltaTime * speed);
         transform.position = newPosition;
+
 
     }
     public void empezar()
