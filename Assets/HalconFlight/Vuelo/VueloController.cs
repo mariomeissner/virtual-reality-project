@@ -30,7 +30,6 @@ public class VueloController : MonoBehaviour {
     public void empezar()
     {
         IU.SetActive(false);
-        speed = 10f;
     }
    
 }
