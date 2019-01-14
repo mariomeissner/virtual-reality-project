@@ -18,19 +18,21 @@ public class VueloController : MonoBehaviour {
     private void Update()
     {
 
-        Vector3 target = destino.transform.position + 
-            (destino.transform.position - transform.position) * speed;
+        Vector3 target = transform.position + 
+            (destino.transform.position - transform.position) * speed * Time.deltaTime;
 
-        newPosition = Vector3.MoveTowards(transform.position, 
-            target, Time.deltaTime * speed);
-        transform.position = newPosition;
+        // newPosition = Vector3.MoveTowards(transform.position, 
+        //     target, Time.deltaTime * speed);
+
+        // transform.Translate(destino.transform.position * speed);
+        transform.position = target;
 
 
     }
     public void empezar()
     {
         IU.SetActive(false);
-        speed = 05f;
+        speed = 200f;
     }
    
 }

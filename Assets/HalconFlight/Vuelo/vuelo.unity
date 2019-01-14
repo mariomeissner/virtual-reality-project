@@ -3584,7 +3584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IU: {fileID: 1840064250}
   destino: {fileID: 590142646}
-  speed: 0
+  speed: 50
 --- !u!4 &1624770040
 Transform:
   m_ObjectHideFlags: 0
