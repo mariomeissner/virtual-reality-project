@@ -32,7 +32,7 @@ public class camera : MonoBehaviour
             lastCount = count;
             SetCounterText();
         } else if(collisionInfo.collider.tag=="PickUp"){
-            this.transform.parent.GetComponent<VueloController>().speed += 1; 
+            this.transform.parent.GetComponent<VueloController>().speed += 2; 
             count += 1;
             SetCounterText();
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class VueloController : MonoBehaviour {
     public GameObject IU;
     public GameObject destino;
-    public float speed;
+    public float speed = 0f;
     private Vector3 newPosition;
 
     // Use this for initialization
@@ -30,6 +30,7 @@ public class VueloController : MonoBehaviour {
     public void empezar()
     {
         IU.SetActive(false);
+        speed = 05f;
     }
    
 }
