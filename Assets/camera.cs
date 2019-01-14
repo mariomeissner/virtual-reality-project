@@ -11,13 +11,11 @@ public class camera : MonoBehaviour
     public Text cornerText;
     public Text menuText;
 
-    public counter counter;
-
     // Start is called before the first frame update
     void Start()
     {
         count = 0;
-        print("Setting counter text, last count: " + counter.prevPoints.ToString());
+        print("Setting counter text, last count: " + count.ToString());
         SetCounterText();
     }
 
@@ -32,12 +30,10 @@ public class camera : MonoBehaviour
         if(collisionInfo.collider.tag=="Terrain"){
             Application.LoadLevel(Application.loadedLevel);
             lastCount = count;
-            counter.prevPoints = counter.points;
             SetCounterText();
         } else if(collisionInfo.collider.tag=="PickUp"){
             this.transform.parent.GetComponent<VueloController>().speed += 1; 
             count += 1;
-            counter.points += 1;
             SetCounterText();
         }
     }
