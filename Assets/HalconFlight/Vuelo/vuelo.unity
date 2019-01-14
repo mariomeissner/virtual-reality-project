@@ -811,7 +811,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reiniciar
+  m_Text: Salir
 --- !u!222 &181210151
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1058,7 +1058,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1780626665}
-        m_MethodName: reiniciar
+        m_MethodName: salir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
