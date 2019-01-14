@@ -10,6 +10,7 @@ public class camera : MonoBehaviour
     private int lastCount = 0;
     public Text cornerText;
     public Text menuText;
+    public AudioClip hitSound;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class camera : MonoBehaviour
     void OnCollisionEnter(Collision collisionInfo)
     {
         if(collisionInfo.collider.tag=="Terrain"){
+            AudioSource.PlayClipAtPoint(hitSound, transform.position);
             Application.LoadLevel(Application.loadedLevel);
             lastCount = count;
             SetCounterText();
